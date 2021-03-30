@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Sign In</title>
-  </head>
-  <body>
+import React from "react";
+
+function SignIn() {
+  return (
     <form action="/authenticate" method="POST">
       <fieldset>
         <label for="email">E-mail</label>
@@ -29,5 +24,7 @@
       </fieldset>
       <button type="submit">Entrar</button>
     </form>
-  </body>
-</html>
+  );
+}
+
+export default SignIn;
