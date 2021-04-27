@@ -6,26 +6,21 @@
   "1 info pnpm": {
     "err": {
       "name": "Error",
-      "message": "@dev-demands/server@1.0.0 start: `node -r esm .`\nExit status 1",
-      "code": "ELIFECYCLE",
-      "stack": "Error: @dev-demands/server@1.0.0 start: `node -r esm .`\nExit status 1\n    at EventEmitter.<anonymous> (/Users/godoy/.nvm/versions/node/v12.14.1/lib/node_modules/pnpm/dist/pnpm.js:103159:18)\n    at EventEmitter.emit (events.js:223:5)\n    at ChildProcess.<anonymous> (/Users/godoy/.nvm/versions/node/v12.14.1/lib/node_modules/pnpm/dist/pnpm.js:88733:16)\n    at ChildProcess.emit (events.js:223:5)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)"
+      "message": "This modules directory was created using the following registries configuration: {\"default\":\"https://registry.npmjs.org/\"}. The current configuration is {\"default\":\"http://modules.bluefoot.com.br/\",\"@bluefoot\":\"http://modules.bluefoot.com.br/\"}. To recreate the modules directory using the new settings, run \"pnpm install\".",
+      "code": "ERR_PNPM_REGISTRIES_MISMATCH",
+      "stack": "Error: This modules directory was created using the following registries configuration: {\"default\":\"https://registry.npmjs.org/\"}. The current configuration is {\"default\":\"http://modules.bluefoot.com.br/\",\"@bluefoot\":\"http://modules.bluefoot.com.br/\"}. To recreate the modules directory using the new settings, run \"pnpm install\".\n    at validateModules (/Users/godoy/.nvm/versions/node/v12.14.1/lib/node_modules/pnpm/dist/pnpm.js:86849:13)\n    at async Object.getContext [as default] (/Users/godoy/.nvm/versions/node/v12.14.1/lib/node_modules/pnpm/dist/pnpm.js:86721:24)\n    at async mutateModules (/Users/godoy/.nvm/versions/node/v12.14.1/lib/node_modules/pnpm/dist/pnpm.js:111232:17)\n    at async Object.addDependenciesToPackage (/Users/godoy/.nvm/versions/node/v12.14.1/lib/node_modules/pnpm/dist/pnpm.js:111539:22)\n    at async /Users/godoy/.nvm/versions/node/v12.14.1/lib/node_modules/pnpm/dist/pnpm.js:113756:29"
     }
   },
   "2 error pnpm": {
     "message": {
-      "errno": 1,
-      "code": "ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL",
-      "pkgid": "@dev-demands/server@1.0.0",
-      "stage": "start",
-      "script": "node -r esm .",
-      "pkgname": "@dev-demands/server",
-      "prefix": "/Users/godoy/Documents/client-server-example/packages/server"
+      "code": "ERR_PNPM_REGISTRIES_MISMATCH",
+      "prefix": "/Users/godoy/Documents/client-server-example/packages/web"
     },
     "err": {
       "name": "Error",
-      "message": "@dev-demands/server@1.0.0 start: `node -r esm .`\nExit status 1",
-      "code": "ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL",
-      "stack": "Error: @dev-demands/server@1.0.0 start: `node -r esm .`\nExit status 1\n    at EventEmitter.<anonymous> (/Users/godoy/.nvm/versions/node/v12.14.1/lib/node_modules/pnpm/dist/pnpm.js:103159:18)\n    at EventEmitter.emit (events.js:223:5)\n    at ChildProcess.<anonymous> (/Users/godoy/.nvm/versions/node/v12.14.1/lib/node_modules/pnpm/dist/pnpm.js:88733:16)\n    at ChildProcess.emit (events.js:223:5)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)"
+      "message": "This modules directory was created using the following registries configuration: {\"default\":\"https://registry.npmjs.org/\"}. The current configuration is {\"default\":\"http://modules.bluefoot.com.br/\",\"@bluefoot\":\"http://modules.bluefoot.com.br/\"}. To recreate the modules directory using the new settings, run \"pnpm install\".",
+      "code": "ERR_PNPM_REGISTRIES_MISMATCH",
+      "stack": "Error: This modules directory was created using the following registries configuration: {\"default\":\"https://registry.npmjs.org/\"}. The current configuration is {\"default\":\"http://modules.bluefoot.com.br/\",\"@bluefoot\":\"http://modules.bluefoot.com.br/\"}. To recreate the modules directory using the new settings, run \"pnpm install\".\n    at validateModules (/Users/godoy/.nvm/versions/node/v12.14.1/lib/node_modules/pnpm/dist/pnpm.js:86849:13)\n    at async Object.getContext [as default] (/Users/godoy/.nvm/versions/node/v12.14.1/lib/node_modules/pnpm/dist/pnpm.js:86721:24)\n    at async mutateModules (/Users/godoy/.nvm/versions/node/v12.14.1/lib/node_modules/pnpm/dist/pnpm.js:111232:17)\n    at async Object.addDependenciesToPackage (/Users/godoy/.nvm/versions/node/v12.14.1/lib/node_modules/pnpm/dist/pnpm.js:111539:22)\n    at async /Users/godoy/.nvm/versions/node/v12.14.1/lib/node_modules/pnpm/dist/pnpm.js:113756:29"
     }
   }
 }

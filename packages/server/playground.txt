@@ -1,0 +1,35 @@
+fragment CLIENT_FRAGMENT on Client {
+  id
+  name
+  email
+  disabled
+}
+
+mutation {
+  createClient(input: {
+    name: "Vitor",
+    email: "vitor@teste.com"
+  }) {
+    ...CLIENT_FRAGMENT
+  }
+  
+  disableClient(id: "fac954c0-9ebd-432a-8ec6-78eab0684948") {
+    ...CLIENT_FRAGMENT
+  }
+  
+  enableClient(id: "fac954c0-9ebd-432a-8ec6-78eab0684948") {
+    ...CLIENT_FRAGMENT
+  }
+  
+  deleteClient(id: "4916ec65-6fd3-412a-819a-f526df4019df") {
+    ...CLIENT_FRAGMENT
+  }
+  
+	updateClient(input: {
+    id: "417fa6f9-cee6-4271-bad3-36dbefc052cd",
+	  name: "Eduardo Messias",
+    email: "gteste@teste.om"
+  }) {
+    ...CLIENT_FRAGMENT
+  }
+}

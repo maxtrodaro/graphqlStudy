@@ -18,6 +18,12 @@
     "apollo-server-express": "^2.22.2",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "graphql": "^15.5.0"
+    "graphql": "^15.5.0",
+    "uuid": "^8.1.0"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "src/data/*"
+    ]
   }
 }
