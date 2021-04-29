@@ -8,11 +8,11 @@ const loggerLink = new ApolloLink(
     new Observable((observer) => {
       const subscription = forward(operation).subscribe({
         next: (result) => {
-          console.log("log", result);
+          console.log("Log", result);
           observer.next(result);
         },
-        complete: observer.error.bind(observer),
-        error: observer.complete.bind(observer),
+        error: observer.error.bind(observer),
+        complete: observer.complete.bind(observer),
       });
 
       return () => subscription.unsubscribe();
