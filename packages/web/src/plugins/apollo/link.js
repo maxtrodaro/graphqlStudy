@@ -6,21 +6,23 @@ import { onError } from "apollo-link-error";
 const loggerLink = new ApolloLink(
   (operation, forward) =>
     new Observable((observer) => {
-      forward(operation).subscribe({
+      const subscription = forward(operation).subscribe({
         next: (result) => {
           console.log("log", result);
           observer.next(result);
         },
-        complete: observer.complete.bind(observer),
+        complete: observer.error.bind(observer),
         error: observer.complete.bind(observer),
       });
+
+      return () => subscription.unsubscribe();
     })
 );
 
 const link = ApolloLink.from([
   loggerLink,
   onError((error) => {
-    console.error("GraohQLError", error);
+    console.error("GraphQLError", error);
   }),
   setContext((_, { headers }) => {
     return {

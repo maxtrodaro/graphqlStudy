@@ -1,7 +1,12 @@
 import React from "react";
+import ClientList from "../components/ClientList";
 
 function Home() {
-  return <h1>Home</h1>;
+  return (
+    <main>
+      <ClientList />
+    </main>
+  );
 }
 
 export default Home;
